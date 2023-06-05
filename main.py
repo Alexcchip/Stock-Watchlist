@@ -39,7 +39,9 @@ while True:
             print(i)
         print("Which stock would you like to see the price of? ")
         stockReadingChoice = input("\n")
-        print(yf.Ticker(stockReadingChoice))
+        stock = yf.Ticker(stockReadingChoice)
+        price = stock.info.get('currentPrice')
+        print(price)
     elif initial == 4:
         break
 #https://stackoverflow.com/questions/61104362/how-to-get-actual-stock-prices-with-yfinance
