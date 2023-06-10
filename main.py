@@ -1,6 +1,5 @@
 import os
 import yfinance as yf
-save_path = "Watchlists"
 #stock = yf.Ticker("MSFT")
 
 # get all stock info
@@ -13,6 +12,10 @@ def gettingData(choice):
     stock = yf.Ticker(choice)
     price = stock.info['currentPrice']
     print("Last Price:",price)
+    choiceDict = stock.info
+    for i in choiceDict:
+        print(i)
+
     print(type(stock.info))
 
 while True:
