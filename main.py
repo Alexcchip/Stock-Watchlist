@@ -13,7 +13,7 @@ def gettingData(choice):
     stock = yf.Ticker(choice)
     price = stock.info['currentPrice']
     print("Last Price:",price)
-
+    print(type(stock.info))
 
 while True:
     start = input("Which watchlist would you like to read from (Tech, Finance or Healthcare)? ")
